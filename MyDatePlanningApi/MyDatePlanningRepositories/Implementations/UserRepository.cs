@@ -34,8 +34,12 @@ namespace MyDatePlanningRepositories.Implementations
         public async Task DeleteUserAsync(int id)
         {
             var user = await _context.Users.FindAsync(id);
-            _context.Users.Remove(user);
-            await _context.SaveChangesAsync();
+            if (user != null)
+            {
+                user.IsActive = false;
+                _context.Users.Update(user);
+                await _context.SaveChangesAsync();
+            }
         }
     }
 }

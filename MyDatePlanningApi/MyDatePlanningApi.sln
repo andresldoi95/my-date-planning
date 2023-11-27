@@ -12,9 +12,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Elementos de la solución",
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDatePlanningRepositories", "MyDatePlanningRepositories\MyDatePlanningRepositories.csproj", "{C32502A3-CFBC-4F21-9701-FC96CF94BC5A}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDatePlanningServices", "MyDatePlanningServices\MyDatePlanningServices.csproj", "{5700B918-111B-4883-B08A-968C8253799D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyDatePlanningRepositories", "MyDatePlanningRepositories\MyDatePlanningRepositories.csproj", "{C32502A3-CFBC-4F21-9701-FC96CF94BC5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,10 +32,6 @@ Global
 		{C32502A3-CFBC-4F21-9701-FC96CF94BC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C32502A3-CFBC-4F21-9701-FC96CF94BC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C32502A3-CFBC-4F21-9701-FC96CF94BC5A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5700B918-111B-4883-B08A-968C8253799D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5700B918-111B-4883-B08A-968C8253799D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5700B918-111B-4883-B08A-968C8253799D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5700B918-111B-4883-B08A-968C8253799D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -7,6 +7,7 @@ namespace MyDatePlanningApi.Models
         {
             CreateMap<Users.CreateUser, MyDatePlanningData.Entities.User>();
             CreateMap<Users.UpdateUser, MyDatePlanningData.Entities.User>();
+            CreateMap<MyDatePlanningData.Entities.User, Users.CreatedUser>();
         }
     }
 }
