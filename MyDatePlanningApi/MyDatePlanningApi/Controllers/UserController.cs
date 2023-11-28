@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyDatePlanningApi.Models.Users;
 using MyDatePlanningApi.Services.Interfaces;
@@ -15,6 +16,7 @@ namespace MyDatePlanningApi.Controllers
         {
             _userService = userService;
         }
+        [Authorize]
         [HttpGet("{id}", Name = nameof(GetUserAsync))]
         public async Task<IActionResult> GetUserAsync(int id)
         {
@@ -37,6 +39,7 @@ namespace MyDatePlanningApi.Controllers
             var createdUser = await _userService.AddUserAsync(user);
             return CreatedAtAction(nameof(GetUserAsync), new { id = createdUser.Id }, createdUser);
         }
+        [Authorize]
         [HttpPut]
         public async Task<IActionResult> UpdateUserAsync([FromBody] UpdateUser user)
         {
