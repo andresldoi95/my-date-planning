@@ -15,5 +15,6 @@ namespace MyDatePlanningApi.Services.Interfaces
         Task<User> GetUserAsync(string email);
         Task UpdateUserAsync(UpdateUser user);
         Task DeleteUserAsync(int id);
+        Task<User> GetUserByUsernameOrEmail(string usernameEmail);
     }
 }

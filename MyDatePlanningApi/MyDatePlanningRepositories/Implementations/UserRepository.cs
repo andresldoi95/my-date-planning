@@ -41,5 +41,10 @@ namespace MyDatePlanningRepositories.Implementations
                 await _context.SaveChangesAsync();
             }
         }
+
+        public async Task<User> GetUserByUsernameEmailAsync(string usernameEmail)
+        {
+            return await _context.Users.FirstOrDefaultAsync(u => (u.Email == usernameEmail || u.LoginName == usernameEmail) && u.IsActive);
+        }
     }
 }

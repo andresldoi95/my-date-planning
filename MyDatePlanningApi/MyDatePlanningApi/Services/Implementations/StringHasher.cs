@@ -17,5 +17,10 @@ namespace MyDatePlanningApi.Services.Implementations
                 return builder.ToString();
             }
         }
+        public bool CheckPassword(string input, string hashedPassword)
+        {
+            var hashedInput = Hash(input);
+            return hashedInput == hashedPassword;
+        }
     }
 }

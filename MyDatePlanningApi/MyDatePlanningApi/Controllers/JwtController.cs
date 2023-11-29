@@ -15,9 +15,9 @@ namespace MyDatePlanningApi.Controllers
         [HttpPost]
         public async Task<IActionResult> Authenticate([FromBody] UserCredentials credentials)
         {
-            var response = _jwtAuthenticator.Authenticate(credentials.UserName, credentials.Password);
+            var response = await _jwtAuthenticator.Authenticate(credentials.UserName, credentials.Password);
             if (response != null) 
-            return Ok(response);
+                return Ok(response);
             return Unauthorized();
         }
     }

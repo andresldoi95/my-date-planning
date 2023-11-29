@@ -9,6 +9,7 @@ namespace MyDatePlanningRepositories.Interfaces
         Task<User> GetUserAsync(string email);
         Task UpdateUserAsync(User user);
         Task DeleteUserAsync(int id);
+        Task<User> GetUserByUsernameEmailAsync(string usernameEmail);
     
     }
 }

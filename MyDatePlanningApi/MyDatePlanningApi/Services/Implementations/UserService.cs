@@ -40,10 +40,16 @@ namespace MyDatePlanningApi.Services.Implementations
             return await _userRepository.GetUserAsync(email);
         }
 
+        public async Task<User> GetUserByUsernameOrEmail(string usernameEmail)
+        {
+            return await _userRepository.GetUserByUsernameEmailAsync(usernameEmail);
+        }
+
         public async Task UpdateUserAsync(UpdateUser user)
         {
             var userEntity = _mapper.Map<User>(user);
             await _userRepository.UpdateUserAsync(userEntity);
         }
+
     }
 }
